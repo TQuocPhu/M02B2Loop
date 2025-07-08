@@ -2,9 +2,8 @@ package org.example;
 
 import java.util.Scanner;
 
-public class PrimeNumberFirst {
-
-    public boolean isPrime(long number) {
+public class _100PrimeNumberFirst {
+    public boolean isPrimeNumber(long number) {
         if (number < 2) return false;
         if (number == 2) return true;
         if (number % 2 == 0) return false; // Loại bỏ số chẵn khác 2
@@ -20,17 +19,20 @@ public class PrimeNumberFirst {
 
     public static void main(String[] args) {
         Scanner inputNumber = new Scanner(System.in);
-        PrimeNumberFirst checked = new PrimeNumberFirst();
+        _100PrimeNumberFirst checked = new _100PrimeNumberFirst();
 
-        long number;
-        System.out.print("Vui long nhap so luong so nguyen to: "); number = inputNumber.nextLong();
+//        long number;
+//        System.out.print("Vui long nhap so luong so nguyen to: "); number = inputNumber.nextLong();
 
         int count = 0;
         long N = 0;
-        while(count < number) {
-            if(checked.isPrime(N)){
+        while(N < 100) {
+            if(checked.isPrimeNumber(N)){
                 System.out.print(N + " ");
                 count++;
+                    if(count == 30 || count == 30*2 || count == 30*3) {
+                        System.out.print("\n");
+                    }
             }
             N++;
         }
